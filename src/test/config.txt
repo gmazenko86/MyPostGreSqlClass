@@ -1,0 +1,4 @@
+hostname = localhost
+dbname = codingex
+user = gmazenko
+password = gregmaz
