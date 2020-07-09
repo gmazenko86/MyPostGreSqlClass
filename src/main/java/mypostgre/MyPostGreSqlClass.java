@@ -1,3 +1,4 @@
+package mypostgre;
 
 import java.io.*;
 import java.sql.*;
@@ -7,13 +8,15 @@ import java.util.Properties;
 import java.util.Scanner;
 import org.postgresql.ds.PGSimpleDataSource;
 
+import myioutils.MyIOUtils;
+
 public class MyPostGreSqlClass {
 
     public final String configFilePath;
 
     public final Connection conn;
 
-    MyPostGreSqlClass(String configFilePath){
+    public MyPostGreSqlClass(String configFilePath){
         this.configFilePath = configFilePath;
         this.conn = getConnection();
     }
