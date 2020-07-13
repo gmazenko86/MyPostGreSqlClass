@@ -14,7 +14,7 @@ public class MyPostGreSqlClass {
 
     public final String configFilePath;
 
-    public final Connection conn;
+    public Connection conn;
 
     public MyPostGreSqlClass(String configFilePath){
         this.configFilePath = configFilePath;
@@ -243,7 +243,7 @@ public class MyPostGreSqlClass {
         arrayList.addAll(swapList);
     }
 
-    void printConnectionStatus(Connection connection) {
+    public void printConnectionStatus(Connection connection) {
         try{
             System.out.println("From ConnectionDemo.runDemo(): " + connection +
                     " is closed = " + connection.isClosed());

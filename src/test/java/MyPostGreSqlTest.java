@@ -1,6 +1,6 @@
 
 import mypostgre.MyPostGreSqlClass;
-//import org.apache.commons.io.output.NullPrintStream;
+import org.apache.commons.io.output.NullPrintStream;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -23,8 +23,10 @@ public class MyPostGreSqlTest {
             exception.printStackTrace();
         }
         Assertions.assertTrue(connectionValid, "Dbase connection not established within timeout");
+
+        testNullPrintStream();
     }
-/*
+
     void testNullPrintStream(){
         System.out.println("Message is shown");
         PrintStream original = System.out;
@@ -34,5 +36,5 @@ public class MyPostGreSqlTest {
         System.out.println("First message after 'Message is shown' to standard console?");
     }
 
- */
+
 }
