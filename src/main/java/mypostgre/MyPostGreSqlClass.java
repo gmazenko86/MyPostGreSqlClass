@@ -260,4 +260,13 @@ public class MyPostGreSqlClass {
         }
     }
 
+    public void truncateTable(String tableName){
+        String sqlString = "truncate " + tableName + ";";
+        try(Statement statement = getStatementScrollable()){
+            statement.execute(sqlString);
+        } catch (SQLException exception) {
+            exception.printStackTrace();
+        }
+    }
+
 }
